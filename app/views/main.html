@@ -1,0 +1,41 @@
+<div class="header" ng-model="date">
+  <h1>{{date.fulldate}}</h1>
+</div>
+
+<div class="jumbotron" ng-model="weather">
+  <h1>{{weather.current_observation.display_location.full}}</h1>
+  <img src={{weather.current_observation.icon_url}} alt={{weather.current_observation.icon}}/>
+  <label>Lat/Lon: {{weather.current_observation.observation_location.latitude}}, {{weather.current_observation.observation_location.longitude}}</label>
+  <label>Elevation: {{weather.current_observation.observation_location.elevation}}</label>
+  </br>
+  <h4>{{weather.current_observation.observation_time}}</h4>
+  <label for="sky" class="col-sm-2 control-label">Sky:</label>
+  <label id="sky" class="col-sm-4">{{weather.current_observation.weather}}</label>
+  <label for="temp" class="col-sm-2 control-label">Temp:</label>
+  <label id="temp" class="col-sm-4">{{weather.current_observation.temperature_string}}</label>
+  </br>
+  <label for="wind" class="col-sm-2 control-label">Wind:</label>
+  <label id="wind" class="col-sm-4">{{weather.current_observation.wind_string}}</label>
+  <label for="feels" class="col-sm-2 control-label">Feels:</label>
+  <label id="feels" class="col-sm-4">{{weather.current_observation.feelslike_string}}</label>
+  </br>
+  <label for="humidity" class="col-sm-2 control-label">Humidity:</label>
+  <label id="humidity" class="col-sm-4">{{weather.current_observation.relative_humidity}}</label>
+  <label for="precip" class="col-sm-2 control-label">Precip:</label>
+  <label id="precip" class="col-sm-4">{{weather.current_observation.precip_today_string}}</label>
+  </br>
+</div>
+
+<div class="jumbotron" ng-model="menu">
+  <h2>Breakfast</h2>
+  <h3>{{menu.breakfast}}</h3>
+  </br>
+  <h2>Lunch</h2>
+  <h3>{{menu.lunch1}}</h3>
+  <h3>{{menu.lunch2}}</h3>
+  <h3>{{menu.lunch3}}</h3>
+</div>
+
+<div class="footer">
+  <p>♥ don't forget to be awesome ♥</p>
+</div>
